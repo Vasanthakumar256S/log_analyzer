@@ -1,0 +1,3635 @@
+{
+  "sessions": [
+    {
+      "session_id": "d65eb051-61b5-4b85-87b1-853add3c55f0",
+      "filename": "demo_hdfs.log",
+      "dataset": "hdfs",
+      "created_at": "2026-06-23T16:24:14.689390+00:00",
+      "stats": {
+        "total_sessions": 157,
+        "anomalous_sessions": 5,
+        "anomaly_rate_pct": 3.18,
+        "index_size": 5,
+        "dataset": "hdfs",
+        "llm_provider": "claude",
+        "llm_model": "claude-sonnet-4-6"
+      },
+      "index_dir": "F:\\M.Tech\\DeepLearning\\Project_LogSense\\Own_Repo\\models\\faiss_index\\d65eb051-61b5-4b85-87b1-853add3c55f0",
+      "csv_path": "F:\\M.Tech\\DeepLearning\\Project_LogSense\\Own_Repo\\data\\processed\\demo_hdfs_structured.csv",
+      "raw_log_path": "F:\\M.Tech\\DeepLearning\\Project_LogSense\\Own_Repo\\data\\raw\\demo_hdfs.log",
+      "total_log_lines": 200,
+      "user_id": "local",
+      "sessions_data": [
+        {
+          "session_id": "blk_-1608999687919862906",
+          "raw_lines": [
+            "BLOCK* NameSystem.allocateBlock: /mnt/hadoop/mapred/system/job_200811092030_0001/job.jar. blk_-1608999687919862906",
+            "Received block blk_-1608999687919862906 of size 91178 from /10.250.14.224",
+            "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.250.14.224:50010 is added to blk_-1608999687919862906 size 91178",
+            "Receiving block blk_-1608999687919862906 src: /10.251.215.16:51177 dest: /10.251.215.16:50010",
+            "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.65.203",
+            "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.250.17.177",
+            "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.31.242",
+            "10.251.71.240:50010 Served block blk_-1608999687919862906 to /10.251.43.210",
+            "10.251.71.193:50010 Served block blk_-1608999687919862906 to /10.251.215.70",
+            "10.251.71.193:50010 Served block blk_-1608999687919862906 to /10.251.39.179",
+            "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.123.99",
+            "10.251.71.193:50010 Served block blk_-1608999687919862906 to /10.251.90.81",
+            "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.250.14.38"
+          ],
+          "events": [
+            {
+              "event_template_id": 1,
+              "event_template": "BLOCK* NameSystem.allocateBlock: <PATH> <BLOCK_ID>",
+              "extracted_variables": [
+                "/mnt/hadoop/mapred/system/job_200811092030_0001/job.jar.",
+                "blk_-1608999687919862906"
+              ],
+              "line_number": 1,
+              "content": "BLOCK* NameSystem.allocateBlock: /mnt/hadoop/mapred/system/job_200811092030_0001/job.jar. blk_-1608999687919862906",
+              "raw_line": "BLOCK* NameSystem.allocateBlock: /mnt/hadoop/mapred/system/job_200811092030_0001/job.jar. blk_-1608999687919862906",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "1",
+              "date": "081109",
+              "time": "203518",
+              "pid": "35",
+              "component": "dfs.FSNamesystem",
+              "eventid": "E1",
+              "eventtemplate": "BLOCK* NameSystem.allocateBlock: <PATH> <BLOCK_ID>",
+              "parameterlist": "['/mnt/hadoop/mapred/system/job_200811092030_0001/job.jar.', 'blk_-1608999687919862906']"
+            },
+            {
+              "event_template_id": 2,
+              "event_template": "Received block <BLOCK_ID> of size <NUM> from /<IP_ADDR>",
+              "extracted_variables": [
+                "blk_-1608999687919862906",
+                "91178",
+                "/10.250.14.224"
+              ],
+              "line_number": 2,
+              "content": "Received block blk_-1608999687919862906 of size 91178 from /10.250.14.224",
+              "raw_line": "Received block blk_-1608999687919862906 of size 91178 from /10.250.14.224",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "2",
+              "date": "081109",
+              "time": "203519",
+              "pid": "147",
+              "component": "dfs.DataNode$PacketResponder",
+              "eventid": "E2",
+              "eventtemplate": "Received block <BLOCK_ID> of size <NUM> from /<IP_ADDR>",
+              "parameterlist": "['blk_-1608999687919862906', '91178', '/10.250.14.224']"
+            },
+            {
+              "event_template_id": 3,
+              "event_template": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP_PORT> is added to <BLOCK_ID> size <NUM>",
+              "extracted_variables": [
+                "10.250.14.224:50010",
+                "blk_-1608999687919862906",
+                "91178"
+              ],
+              "line_number": 3,
+              "content": "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.250.14.224:50010 is added to blk_-1608999687919862906 size 91178",
+              "raw_line": "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.250.14.224:50010 is added to blk_-1608999687919862906 size 91178",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "3",
+              "date": "081109",
+              "time": "203519",
+              "pid": "31",
+              "component": "dfs.FSNamesystem",
+              "eventid": "E3",
+              "eventtemplate": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP_PORT> is added to <BLOCK_ID> size <NUM>",
+              "parameterlist": "['10.250.14.224:50010', 'blk_-1608999687919862906', '91178']"
+            },
+            {
+              "event_template_id": 4,
+              "event_template": "Receiving block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT>",
+              "extracted_variables": [
+                "blk_-1608999687919862906",
+                "/10.251.215.16:51177",
+                "/10.251.215.16:50010"
+              ],
+              "line_number": 6,
+              "content": "Receiving block blk_-1608999687919862906 src: /10.251.215.16:51177 dest: /10.251.215.16:50010",
+              "raw_line": "Receiving block blk_-1608999687919862906 src: /10.251.215.16:51177 dest: /10.251.215.16:50010",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "6",
+              "date": "081109",
+              "time": "203526",
+              "pid": "146",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E4",
+              "eventtemplate": "Receiving block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT>",
+              "parameterlist": "['blk_-1608999687919862906', '/10.251.215.16:51177', '/10.251.215.16:50010']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.250.10.6:50010",
+                "blk_-1608999687919862906",
+                "/10.251.65.203"
+              ],
+              "line_number": 7,
+              "content": "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.65.203",
+              "raw_line": "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.65.203",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "7",
+              "date": "081109",
+              "time": "203527",
+              "pid": "152",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E5",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.250.10.6:50010', 'blk_-1608999687919862906', '/10.251.65.203']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.74.79:50010",
+                "blk_-1608999687919862906",
+                "/10.250.17.177"
+              ],
+              "line_number": 9,
+              "content": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.250.17.177",
+              "raw_line": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.250.17.177",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "9",
+              "date": "081109",
+              "time": "203528",
+              "pid": "151",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E5",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.74.79:50010', 'blk_-1608999687919862906', '/10.250.17.177']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.74.79:50010",
+                "blk_-1608999687919862906",
+                "/10.251.31.242"
+              ],
+              "line_number": 10,
+              "content": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.31.242",
+              "raw_line": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.31.242",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "10",
+              "date": "081109",
+              "time": "203528",
+              "pid": "152",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E5",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.74.79:50010', 'blk_-1608999687919862906', '/10.251.31.242']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.71.240:50010",
+                "blk_-1608999687919862906",
+                "/10.251.43.210"
+              ],
+              "line_number": 12,
+              "content": "10.251.71.240:50010 Served block blk_-1608999687919862906 to /10.251.43.210",
+              "raw_line": "10.251.71.240:50010 Served block blk_-1608999687919862906 to /10.251.43.210",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "12",
+              "date": "081109",
+              "time": "203531",
+              "pid": "146",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E5",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.71.240:50010', 'blk_-1608999687919862906', '/10.251.43.210']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.71.193:50010",
+                "blk_-1608999687919862906",
+                "/10.251.215.70"
+              ],
+              "line_number": 14,
+              "content": "10.251.71.193:50010 Served block blk_-1608999687919862906 to /10.251.215.70",
+              "raw_line": "10.251.71.193:50010 Served block blk_-1608999687919862906 to /10.251.215.70",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "14",
+              "date": "081109",
+              "time": "203531",
+              "pid": "149",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E5",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.71.193:50010', 'blk_-1608999687919862906', '/10.251.215.70']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.71.193:50010",
+                "blk_-1608999687919862906",
+                "/10.251.39.179"
+              ],
+              "line_number": 15,
+              "content": "10.251.71.193:50010 Served block blk_-1608999687919862906 to /10.251.39.179",
+              "raw_line": "10.251.71.193:50010 Served block blk_-1608999687919862906 to /10.251.39.179",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "15",
+              "date": "081109",
+              "time": "203531",
+              "pid": "154",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E5",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.71.193:50010', 'blk_-1608999687919862906', '/10.251.39.179']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.74.79:50010",
+                "blk_-1608999687919862906",
+                "/10.251.123.99"
+              ],
+              "line_number": 16,
+              "content": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.123.99",
+              "raw_line": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.123.99",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "16",
+              "date": "081109",
+              "time": "203531",
+              "pid": "167",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E5",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.74.79:50010', 'blk_-1608999687919862906', '/10.251.123.99']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.71.193:50010",
+                "blk_-1608999687919862906",
+                "/10.251.90.81"
+              ],
+              "line_number": 30,
+              "content": "10.251.71.193:50010 Served block blk_-1608999687919862906 to /10.251.90.81",
+              "raw_line": "10.251.71.193:50010 Served block blk_-1608999687919862906 to /10.251.90.81",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "30",
+              "date": "081109",
+              "time": "203533",
+              "pid": "162",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E5",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.71.193:50010', 'blk_-1608999687919862906', '/10.251.90.81']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.74.79:50010",
+                "blk_-1608999687919862906",
+                "/10.250.14.38"
+              ],
+              "line_number": 84,
+              "content": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.250.14.38",
+              "raw_line": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.250.14.38",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "84",
+              "date": "081109",
+              "time": "203545",
+              "pid": "189",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E5",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.74.79:50010', 'blk_-1608999687919862906', '/10.250.14.38']"
+            }
+          ],
+          "label": null,
+          "anomaly_score": -0.0813113356964551,
+          "line_range": [
+            1,
+            84
+          ]
+        },
+        {
+          "session_id": "blk_-3544583377289625738",
+          "raw_lines": [
+            "Receiving block blk_-3544583377289625738 src: /10.250.19.102:39325 dest: /10.250.19.102:50010",
+            "10.251.197.226:50010 Served block blk_-3544583377289625738 to /10.251.203.4",
+            "10.250.11.100:50010 Served block blk_-3544583377289625738 to /10.250.14.196",
+            "10.251.197.226:50010 Served block blk_-3544583377289625738 to /10.251.26.131",
+            "10.250.11.100:50010 Served block blk_-3544583377289625738 to /10.251.37.240",
+            "10.251.39.179:50010 Served block blk_-3544583377289625738 to /10.251.199.245",
+            "10.251.39.179:50010 Served block blk_-3544583377289625738 to /10.251.199.159",
+            "10.251.39.179:50010 Served block blk_-3544583377289625738 to /10.251.126.22",
+            "10.250.11.100:50010 Served block blk_-3544583377289625738 to /10.251.198.33",
+            "10.251.197.226:50010 Served block blk_-3544583377289625738 to /10.251.202.134"
+          ],
+          "events": [
+            {
+              "event_template_id": 4,
+              "event_template": "Receiving block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT>",
+              "extracted_variables": [
+                "blk_-3544583377289625738",
+                "/10.250.19.102:39325",
+                "/10.250.19.102:50010"
+              ],
+              "line_number": 4,
+              "content": "Receiving block blk_-3544583377289625738 src: /10.250.19.102:39325 dest: /10.250.19.102:50010",
+              "raw_line": "Receiving block blk_-3544583377289625738 src: /10.250.19.102:39325 dest: /10.250.19.102:50010",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "4",
+              "date": "081109",
+              "time": "203521",
+              "pid": "145",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E4",
+              "eventtemplate": "Receiving block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT>",
+              "parameterlist": "['blk_-3544583377289625738', '/10.250.19.102:39325', '/10.250.19.102:50010']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.197.226:50010",
+                "blk_-3544583377289625738",
+                "/10.251.203.4"
+              ],
+              "line_number": 8,
+              "content": "10.251.197.226:50010 Served block blk_-3544583377289625738 to /10.251.203.4",
+              "raw_line": "10.251.197.226:50010 Served block blk_-3544583377289625738 to /10.251.203.4",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "8",
+              "date": "081109",
+              "time": "203527",
+              "pid": "154",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E5",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.197.226:50010', 'blk_-3544583377289625738', '/10.251.203.4']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.250.11.100:50010",
+                "blk_-3544583377289625738",
+                "/10.250.14.196"
+              ],
+              "line_number": 11,
+              "content": "10.250.11.100:50010 Served block blk_-3544583377289625738 to /10.250.14.196",
+              "raw_line": "10.250.11.100:50010 Served block blk_-3544583377289625738 to /10.250.14.196",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "11",
+              "date": "081109",
+              "time": "203530",
+              "pid": "187",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E5",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.250.11.100:50010', 'blk_-3544583377289625738', '/10.250.14.196']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.197.226:50010",
+                "blk_-3544583377289625738",
+                "/10.251.26.131"
+              ],
+              "line_number": 26,
+              "content": "10.251.197.226:50010 Served block blk_-3544583377289625738 to /10.251.26.131",
+              "raw_line": "10.251.197.226:50010 Served block blk_-3544583377289625738 to /10.251.26.131",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "26",
+              "date": "081109",
+              "time": "203532",
+              "pid": "194",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E5",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.197.226:50010', 'blk_-3544583377289625738', '/10.251.26.131']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.250.11.100:50010",
+                "blk_-3544583377289625738",
+                "/10.251.37.240"
+              ],
+              "line_number": 31,
+              "content": "10.250.11.100:50010 Served block blk_-3544583377289625738 to /10.251.37.240",
+              "raw_line": "10.250.11.100:50010 Served block blk_-3544583377289625738 to /10.251.37.240",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "31",
+              "date": "081109",
+              "time": "203533",
+              "pid": "210",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E5",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.250.11.100:50010', 'blk_-3544583377289625738', '/10.251.37.240']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.39.179:50010",
+                "blk_-3544583377289625738",
+                "/10.251.199.245"
+              ],
+              "line_number": 38,
+              "content": "10.251.39.179:50010 Served block blk_-3544583377289625738 to /10.251.199.245",
+              "raw_line": "10.251.39.179:50010 Served block blk_-3544583377289625738 to /10.251.199.245",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "38",
+              "date": "081109",
+              "time": "203534",
+              "pid": "199",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E5",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.39.179:50010', 'blk_-3544583377289625738', '/10.251.199.245']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.39.179:50010",
+                "blk_-3544583377289625738",
+                "/10.251.199.159"
+              ],
+              "line_number": 47,
+              "content": "10.251.39.179:50010 Served block blk_-3544583377289625738 to /10.251.199.159",
+              "raw_line": "10.251.39.179:50010 Served block blk_-3544583377289625738 to /10.251.199.159",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "47",
+              "date": "081109",
+              "time": "203535",
+              "pid": "206",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E5",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.39.179:50010', 'blk_-3544583377289625738', '/10.251.199.159']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.39.179:50010",
+                "blk_-3544583377289625738",
+                "/10.251.126.22"
+              ],
+              "line_number": 48,
+              "content": "10.251.39.179:50010 Served block blk_-3544583377289625738 to /10.251.126.22",
+              "raw_line": "10.251.39.179:50010 Served block blk_-3544583377289625738 to /10.251.126.22",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "48",
+              "date": "081109",
+              "time": "203535",
+              "pid": "211",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E5",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.39.179:50010', 'blk_-3544583377289625738', '/10.251.126.22']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.250.11.100:50010",
+                "blk_-3544583377289625738",
+                "/10.251.198.33"
+              ],
+              "line_number": 81,
+              "content": "10.250.11.100:50010 Served block blk_-3544583377289625738 to /10.251.198.33",
+              "raw_line": "10.250.11.100:50010 Served block blk_-3544583377289625738 to /10.251.198.33",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "81",
+              "date": "081109",
+              "time": "203544",
+              "pid": "235",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E5",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.250.11.100:50010', 'blk_-3544583377289625738', '/10.251.198.33']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.197.226:50010",
+                "blk_-3544583377289625738",
+                "/10.251.202.134"
+              ],
+              "line_number": 167,
+              "content": "10.251.197.226:50010 Served block blk_-3544583377289625738 to /10.251.202.134",
+              "raw_line": "10.251.197.226:50010 Served block blk_-3544583377289625738 to /10.251.202.134",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "167",
+              "date": "081109",
+              "time": "203616",
+              "pid": "250",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E5",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.197.226:50010', 'blk_-3544583377289625738', '/10.251.202.134']"
+            }
+          ],
+          "label": null,
+          "anomaly_score": -0.04424187354775899,
+          "line_range": [
+            4,
+            167
+          ]
+        },
+        {
+          "session_id": "blk_2619290546489140930",
+          "raw_lines": [
+            "BLOCK* NameSystem.allocateBlock: /user/root/rand/_temporary/_task_200811092030_0001_m_000320_0/part-00320. blk_2619290546489140930",
+            "Received block blk_2619290546489140930 of size 67108864 from /10.251.214.67",
+            "PacketResponder 1 for block blk_2619290546489140930 terminating"
+          ],
+          "events": [
+            {
+              "event_template_id": 1,
+              "event_template": "BLOCK* NameSystem.allocateBlock: <PATH> <BLOCK_ID>",
+              "extracted_variables": [
+                "/user/root/rand/_temporary/_task_200811092030_0001_m_000320_0/part-00320.",
+                "blk_2619290546489140930"
+              ],
+              "line_number": 53,
+              "content": "BLOCK* NameSystem.allocateBlock: /user/root/rand/_temporary/_task_200811092030_0001_m_000320_0/part-00320. blk_2619290546489140930",
+              "raw_line": "BLOCK* NameSystem.allocateBlock: /user/root/rand/_temporary/_task_200811092030_0001_m_000320_0/part-00320. blk_2619290546489140930",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "53",
+              "date": "081109",
+              "time": "203535",
+              "pid": "34",
+              "component": "dfs.FSNamesystem",
+              "eventid": "E1",
+              "eventtemplate": "BLOCK* NameSystem.allocateBlock: <PATH> <BLOCK_ID>",
+              "parameterlist": "['/user/root/rand/_temporary/_task_200811092030_0001_m_000320_0/part-00320.', 'blk_2619290546489140930']"
+            },
+            {
+              "event_template_id": 2,
+              "event_template": "Received block <BLOCK_ID> of size <*> from /<IP_ADDR>",
+              "extracted_variables": [
+                "blk_2619290546489140930",
+                "67108864",
+                "/10.251.214.67"
+              ],
+              "line_number": 140,
+              "content": "Received block blk_2619290546489140930 of size 67108864 from /10.251.214.67",
+              "raw_line": "Received block blk_2619290546489140930 of size 67108864 from /10.251.214.67",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "140",
+              "date": "081109",
+              "time": "203611",
+              "pid": "160",
+              "component": "dfs.DataNode$PacketResponder",
+              "eventid": "E2",
+              "eventtemplate": "Received block <BLOCK_ID> of size <*> from /<IP_ADDR>",
+              "parameterlist": "['blk_2619290546489140930', '67108864', '/10.251.214.67']"
+            },
+            {
+              "event_template_id": 6,
+              "event_template": "PacketResponder <NUM> for block <BLOCK_ID> terminating",
+              "extracted_variables": [
+                "1",
+                "blk_2619290546489140930"
+              ],
+              "line_number": 141,
+              "content": "PacketResponder 1 for block blk_2619290546489140930 terminating",
+              "raw_line": "PacketResponder 1 for block blk_2619290546489140930 terminating",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "141",
+              "date": "081109",
+              "time": "203611",
+              "pid": "162",
+              "component": "dfs.DataNode$PacketResponder",
+              "eventid": "E6",
+              "eventtemplate": "PacketResponder <NUM> for block <BLOCK_ID> terminating",
+              "parameterlist": "['1', 'blk_2619290546489140930']"
+            }
+          ],
+          "label": null,
+          "anomaly_score": -0.023606812561813517,
+          "line_range": [
+            53,
+            141
+          ]
+        },
+        {
+          "session_id": "blk_-1268704127005579599",
+          "raw_lines": [
+            "BLOCK* NameSystem.allocateBlock: /user/root/rand/_temporary/_task_200811092030_0001_m_000357_0/part-00357. blk_-1268704127005579599",
+            "Received block blk_-1268704127005579599 of size 67108864 from /10.251.90.64",
+            "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.90.64:50010 is added to blk_-1268704127005579599 size 67108864"
+          ],
+          "events": [
+            {
+              "event_template_id": 1,
+              "event_template": "BLOCK* NameSystem.allocateBlock: <PATH> <BLOCK_ID>",
+              "extracted_variables": [
+                "/user/root/rand/_temporary/_task_200811092030_0001_m_000357_0/part-00357.",
+                "blk_-1268704127005579599"
+              ],
+              "line_number": 75,
+              "content": "BLOCK* NameSystem.allocateBlock: /user/root/rand/_temporary/_task_200811092030_0001_m_000357_0/part-00357. blk_-1268704127005579599",
+              "raw_line": "BLOCK* NameSystem.allocateBlock: /user/root/rand/_temporary/_task_200811092030_0001_m_000357_0/part-00357. blk_-1268704127005579599",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "75",
+              "date": "081109",
+              "time": "203540",
+              "pid": "27",
+              "component": "dfs.FSNamesystem",
+              "eventid": "E1",
+              "eventtemplate": "BLOCK* NameSystem.allocateBlock: <PATH> <BLOCK_ID>",
+              "parameterlist": "['/user/root/rand/_temporary/_task_200811092030_0001_m_000357_0/part-00357.', 'blk_-1268704127005579599']"
+            },
+            {
+              "event_template_id": 2,
+              "event_template": "Received block <BLOCK_ID> of size <*> from /<IP_ADDR>",
+              "extracted_variables": [
+                "blk_-1268704127005579599",
+                "67108864",
+                "/10.251.90.64"
+              ],
+              "line_number": 174,
+              "content": "Received block blk_-1268704127005579599 of size 67108864 from /10.251.90.64",
+              "raw_line": "Received block blk_-1268704127005579599 of size 67108864 from /10.251.90.64",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "174",
+              "date": "081109",
+              "time": "203617",
+              "pid": "158",
+              "component": "dfs.DataNode$PacketResponder",
+              "eventid": "E2",
+              "eventtemplate": "Received block <BLOCK_ID> of size <*> from /<IP_ADDR>",
+              "parameterlist": "['blk_-1268704127005579599', '67108864', '/10.251.90.64']"
+            },
+            {
+              "event_template_id": 3,
+              "event_template": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP_PORT> is added to <BLOCK_ID> size <*>",
+              "extracted_variables": [
+                "10.251.90.64:50010",
+                "blk_-1268704127005579599",
+                "67108864"
+              ],
+              "line_number": 185,
+              "content": "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.90.64:50010 is added to blk_-1268704127005579599 size 67108864",
+              "raw_line": "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.90.64:50010 is added to blk_-1268704127005579599 size 67108864",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "185",
+              "date": "081109",
+              "time": "203618",
+              "pid": "30",
+              "component": "dfs.FSNamesystem",
+              "eventid": "E3",
+              "eventtemplate": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP_PORT> is added to <BLOCK_ID> size <*>",
+              "parameterlist": "['10.251.90.64:50010', 'blk_-1268704127005579599', '67108864']"
+            }
+          ],
+          "label": null,
+          "anomaly_score": -0.017854194766838805,
+          "line_range": [
+            75,
+            185
+          ]
+        },
+        {
+          "session_id": "blk_-66330728533676520",
+          "raw_lines": [
+            "PacketResponder 1 for block blk_-66330728533676520 terminating",
+            "PacketResponder 2 for block blk_-66330728533676520 terminating"
+          ],
+          "events": [
+            {
+              "event_template_id": 6,
+              "event_template": "PacketResponder <NUM> for block <BLOCK_ID> terminating",
+              "extracted_variables": [
+                "1",
+                "blk_-66330728533676520"
+              ],
+              "line_number": 126,
+              "content": "PacketResponder 1 for block blk_-66330728533676520 terminating",
+              "raw_line": "PacketResponder 1 for block blk_-66330728533676520 terminating",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "126",
+              "date": "081109",
+              "time": "203608",
+              "pid": "153",
+              "component": "dfs.DataNode$PacketResponder",
+              "eventid": "E6",
+              "eventtemplate": "PacketResponder <NUM> for block <BLOCK_ID> terminating",
+              "parameterlist": "['1', 'blk_-66330728533676520']"
+            },
+            {
+              "event_template_id": 6,
+              "event_template": "PacketResponder <NUM> for block <BLOCK_ID> terminating",
+              "extracted_variables": [
+                "2",
+                "blk_-66330728533676520"
+              ],
+              "line_number": 132,
+              "content": "PacketResponder 2 for block blk_-66330728533676520 terminating",
+              "raw_line": "PacketResponder 2 for block blk_-66330728533676520 terminating",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "132",
+              "date": "081109",
+              "time": "203609",
+              "pid": "153",
+              "component": "dfs.DataNode$PacketResponder",
+              "eventid": "E6",
+              "eventtemplate": "PacketResponder <NUM> for block <BLOCK_ID> terminating",
+              "parameterlist": "['2', 'blk_-66330728533676520']"
+            }
+          ],
+          "label": null,
+          "anomaly_score": -0.025810197540631075,
+          "line_range": [
+            126,
+            132
+          ]
+        }
+      ],
+      "analysis_cache": {},
+      "score_distribution": [
+        {
+          "score": -0.0813113356964551,
+          "label": null,
+          "is_anomalous": true
+        },
+        {
+          "score": -0.04424187354775899,
+          "label": null,
+          "is_anomalous": true
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.06079703327296493,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.126916338431309,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.008401974007924085,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.126916338431309,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.126916338431309,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.06079703327296493,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": -0.023606812561813517,
+          "label": null,
+          "is_anomalous": true
+        },
+        {
+          "score": 0.0588465570689104,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.126916338431309,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.010503151449632209,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.126916338431309,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": -0.017854194766838805,
+          "label": null,
+          "is_anomalous": true
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.0588465570689104,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.25153601860984365,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.0986816743447867,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.2215584689795152,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.23332289893380403,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.2215584689795152,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.23332289893380403,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.23332289893380403,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.23332289893380403,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.0986816743447867,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.23332289893380403,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.23332289893380403,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.2215584689795152,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.23332289893380403,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.25153601860984365,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.2215584689795152,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.25153601860984365,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.23332289893380403,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.25153601860984365,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.2215584689795152,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": -0.025810197540631075,
+          "label": null,
+          "is_anomalous": true
+        },
+        {
+          "score": 0.23332289893380403,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.23332289893380403,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.2215584689795152,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.25153601860984365,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.23332289893380403,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.25153601860984365,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.23332289893380403,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.25153601860984365,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.23332289893380403,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.23332289893380403,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.2215584689795152,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.25153601860984365,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.23332289893380403,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.07381120552697129,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.2215584689795152,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.2215584689795152,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.23332289893380403,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.25153601860984365,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.2215584689795152,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.25153601860984365,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.2215584689795152,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.07381120552697129,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.25153601860984365,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.2215584689795152,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.25153601860984365,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.25153601860984365,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.25153601860984365,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.25153601860984365,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.0986816743447867,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.2215584689795152,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.0986816743447867,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.2215584689795152,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.26331519531196235,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.23332289893380403,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.23332289893380403,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.34505117671211427,
+          "label": null,
+          "is_anomalous": false
+        }
+      ]
+    },
+    {
+      "session_id": "786c9ea6-22a8-486d-a0a8-10961700cf96",
+      "filename": "logs.txt",
+      "dataset": "hdfs",
+      "created_at": "2026-06-23T15:41:12.933662+00:00",
+      "stats": {
+        "total_sessions": 5,
+        "anomalous_sessions": 1,
+        "anomaly_rate_pct": 20.0,
+        "index_size": 1,
+        "dataset": "hdfs",
+        "llm_provider": "claude",
+        "llm_model": "claude-sonnet-4-6"
+      },
+      "index_dir": "F:\\M.Tech\\DeepLearning\\Project_LogSense\\Own_Repo\\models\\faiss_index\\786c9ea6-22a8-486d-a0a8-10961700cf96",
+      "csv_path": "F:\\M.Tech\\DeepLearning\\Project_LogSense\\Own_Repo\\data\\processed\\logs_structured.csv",
+      "raw_log_path": "F:\\M.Tech\\DeepLearning\\Project_LogSense\\Own_Repo\\data\\raw\\uploads\\logs.txt",
+      "total_log_lines": 180,
+      "user_id": "local",
+      "sessions_data": [
+        {
+          "session_id": "blk_-1608999687919862906",
+          "raw_lines": [
+            "Receiving block blk_-1608999687919862906 src: /10.250.19.102:54106 dest: /10.250.19.102:50010",
+            "BLOCK* NameSystem.allocateBlock: /mnt/hadoop/mapred/system/job_200811092030_0001/job.jar. blk_-1608999687919862906",
+            "Receiving block blk_-1608999687919862906 src: /10.250.10.6:40524 dest: /10.250.10.6:50010",
+            "Receiving block blk_-1608999687919862906 src: /10.250.14.224:42420 dest: /10.250.14.224:50010",
+            "PacketResponder 1 for block blk_-1608999687919862906 terminating",
+            "PacketResponder 2 for block blk_-1608999687919862906 terminating",
+            "Received block blk_-1608999687919862906 of size 91178 from /10.250.10.6",
+            "Received block blk_-1608999687919862906 of size 91178 from /10.250.19.102",
+            "PacketResponder 0 for block blk_-1608999687919862906 terminating",
+            "Received block blk_-1608999687919862906 of size 91178 from /10.250.14.224",
+            "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.250.10.6:50010 is added to blk_-1608999687919862906 size 91178",
+            "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.111.209:50010 is added to blk_-1608999687919862906 size 91178",
+            "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.250.14.224:50010 is added to blk_-1608999687919862906 size 91178",
+            "Received block blk_-1608999687919862906 src: /10.251.215.16:52002 dest: /10.251.215.16:50010 of size 91178",
+            "Receiving block blk_-1608999687919862906 src: /10.251.215.16:52002 dest: /10.251.215.16:50010",
+            "10.250.14.224:50010:Transmitted block blk_-1608999687919862906 to /10.251.215.16:50010",
+            "Received block blk_-1608999687919862906 src: /10.250.14.224:35754 dest: /10.250.14.224:50010 of size 91178",
+            "Receiving block blk_-1608999687919862906 src: /10.250.14.224:35754 dest: /10.250.14.224:50010",
+            "10.250.14.224:50010 Starting thread to transfer block blk_-1608999687919862906 to 10.251.215.16:50010, 10.251.71.193:50010",
+            "BLOCK* ask 10.250.14.224:50010 to replicate blk_-1608999687919862906 to datanode(s) 10.251.215.16:50010 10.251.71.193:50010",
+            "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.71.193:50010 is added to blk_-1608999687919862906 size 91178",
+            "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.215.16:50010 is added to blk_-1608999687919862906 size 91178",
+            "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.250.19.102",
+            "BLOCK* ask 10.251.215.16:50010 to replicate blk_-1608999687919862906 to datanode(s) 10.251.74.79:50010 10.251.107.19:50010",
+            "Received block blk_-1608999687919862906 src: /10.251.215.16:51177 dest: /10.251.215.16:50010 of size 91178",
+            "Received block blk_-1608999687919862906 src: /10.251.74.79:60333 dest: /10.251.74.79:50010 of size 91178",
+            "Receiving block blk_-1608999687919862906 src: /10.251.215.16:51177 dest: /10.251.215.16:50010",
+            "Receiving block blk_-1608999687919862906 src: /10.251.74.79:60333 dest: /10.251.74.79:50010",
+            "10.251.215.16:50010:Transmitted block blk_-1608999687919862906 to /10.251.74.79:50010",
+            "10.251.215.16:50010 Starting thread to transfer block blk_-1608999687919862906 to 10.251.74.79:50010, 10.251.107.19:50010",
+            "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.74.79:50010 is added to blk_-1608999687919862906 size 91178",
+            "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.107.19:50010 is added to blk_-1608999687919862906 size 91178",
+            "Receiving block blk_-1608999687919862906 src: /10.251.31.5:53020 dest: /10.251.31.5:50010",
+            "Received block blk_-1608999687919862906 src: /10.251.107.19:56341 dest: /10.251.107.19:50010 of size 91178",
+            "Receiving block blk_-1608999687919862906 src: /10.251.107.19:56341 dest: /10.251.107.19:50010",
+            "10.251.107.19:50010:Transmitted block blk_-1608999687919862906 to /10.251.31.5:50010",
+            "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.250.18.114",
+            "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.203.149",
+            "10.250.14.224:50010 Served block blk_-1608999687919862906 to /10.251.31.5",
+            "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.125.193",
+            "10.250.14.224:50010 Served block blk_-1608999687919862906 to /10.251.30.134",
+            "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.65.203",
+            "10.250.14.224:50010 Served block blk_-1608999687919862906 to /10.251.127.191",
+            "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.111.209",
+            "10.251.215.16:50010 Served block blk_-1608999687919862906 to /10.251.215.16",
+            "10.251.215.16:50010 Served block blk_-1608999687919862906 to /10.250.19.227",
+            "10.251.107.19:50010 Starting thread to transfer block blk_-1608999687919862906 to 10.251.31.5:50010, 10.251.71.240:50010",
+            "BLOCK* ask 10.251.107.19:50010 to replicate blk_-1608999687919862906 to datanode(s) 10.251.31.5:50010 10.251.71.240:50010",
+            "Received block blk_-1608999687919862906 src: /10.251.31.5:53020 dest: /10.251.31.5:50010 of size 91178",
+            "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.127.243",
+            "10.251.31.5:50010 Served block blk_-1608999687919862906 to /10.251.30.6",
+            "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.250.19.16",
+            "10.251.31.5:50010 Served block blk_-1608999687919862906 to /10.251.214.225",
+            "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.74.192",
+            "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.250.17.177",
+            "10.251.31.5:50010 Served block blk_-1608999687919862906 to /10.251.71.16",
+            "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.31.242",
+            "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.250.17.225",
+            "10.250.14.224:50010 Served block blk_-1608999687919862906 to /10.251.30.85",
+            "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.66.63",
+            "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.66.3",
+            "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.126.227",
+            "10.251.215.16:50010 Served block blk_-1608999687919862906 to /10.251.126.5",
+            "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.43.115",
+            "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.31.5:50010 is added to blk_-1608999687919862906 size 91178",
+            "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.71.240:50010 is added to blk_-1608999687919862906 size 91178",
+            "10.251.31.5:50010 Served block blk_-1608999687919862906 to /10.251.31.180",
+            "10.250.14.224:50010 Served block blk_-1608999687919862906 to /10.251.67.113",
+            "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.215.192",
+            "10.251.31.5:50010 Served block blk_-1608999687919862906 to /10.251.31.160",
+            "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.67.225",
+            "10.250.14.224:50010 Served block blk_-1608999687919862906 to /10.251.42.9",
+            "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.66.192",
+            "10.251.31.5:50010 Served block blk_-1608999687919862906 to /10.251.43.147",
+            "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.65.237",
+            "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.199.225",
+            "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.214.18",
+            "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.201.204",
+            "10.251.215.16:50010 Served block blk_-1608999687919862906 to /10.251.75.49",
+            "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.203.246",
+            "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.67.211",
+            "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.75.163",
+            "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.74.227",
+            "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.194.245",
+            "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.203.166",
+            "10.251.215.16:50010 Served block blk_-1608999687919862906 to /10.251.73.220"
+          ],
+          "events": [
+            {
+              "event_template_id": 1,
+              "event_template": "Receiving block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT>",
+              "extracted_variables": [
+                "blk_-1608999687919862906",
+                "/10.250.19.102:54106",
+                "/10.250.19.102:50010"
+              ],
+              "line_number": 1,
+              "content": "Receiving block blk_-1608999687919862906 src: /10.250.19.102:54106 dest: /10.250.19.102:50010",
+              "raw_line": "Receiving block blk_-1608999687919862906 src: /10.250.19.102:54106 dest: /10.250.19.102:50010",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "1",
+              "date": "081109",
+              "time": "203518",
+              "pid": "143",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E1",
+              "eventtemplate": "Receiving block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT>",
+              "parameterlist": "['blk_-1608999687919862906', '/10.250.19.102:54106', '/10.250.19.102:50010']"
+            },
+            {
+              "event_template_id": 2,
+              "event_template": "BLOCK* NameSystem.allocateBlock: <PATH> <BLOCK_ID>",
+              "extracted_variables": [
+                "/mnt/hadoop/mapred/system/job_200811092030_0001/job.jar.",
+                "blk_-1608999687919862906"
+              ],
+              "line_number": 2,
+              "content": "BLOCK* NameSystem.allocateBlock: /mnt/hadoop/mapred/system/job_200811092030_0001/job.jar. blk_-1608999687919862906",
+              "raw_line": "BLOCK* NameSystem.allocateBlock: /mnt/hadoop/mapred/system/job_200811092030_0001/job.jar. blk_-1608999687919862906",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "2",
+              "date": "081109",
+              "time": "203518",
+              "pid": "35",
+              "component": "dfs.FSNamesystem",
+              "eventid": "E2",
+              "eventtemplate": "BLOCK* NameSystem.allocateBlock: <PATH> <BLOCK_ID>",
+              "parameterlist": "['/mnt/hadoop/mapred/system/job_200811092030_0001/job.jar.', 'blk_-1608999687919862906']"
+            },
+            {
+              "event_template_id": 1,
+              "event_template": "Receiving block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT>",
+              "extracted_variables": [
+                "blk_-1608999687919862906",
+                "/10.250.10.6:40524",
+                "/10.250.10.6:50010"
+              ],
+              "line_number": 3,
+              "content": "Receiving block blk_-1608999687919862906 src: /10.250.10.6:40524 dest: /10.250.10.6:50010",
+              "raw_line": "Receiving block blk_-1608999687919862906 src: /10.250.10.6:40524 dest: /10.250.10.6:50010",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "3",
+              "date": "081109",
+              "time": "203519",
+              "pid": "143",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E1",
+              "eventtemplate": "Receiving block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT>",
+              "parameterlist": "['blk_-1608999687919862906', '/10.250.10.6:40524', '/10.250.10.6:50010']"
+            },
+            {
+              "event_template_id": 1,
+              "event_template": "Receiving block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT>",
+              "extracted_variables": [
+                "blk_-1608999687919862906",
+                "/10.250.14.224:42420",
+                "/10.250.14.224:50010"
+              ],
+              "line_number": 4,
+              "content": "Receiving block blk_-1608999687919862906 src: /10.250.14.224:42420 dest: /10.250.14.224:50010",
+              "raw_line": "Receiving block blk_-1608999687919862906 src: /10.250.14.224:42420 dest: /10.250.14.224:50010",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "4",
+              "date": "081109",
+              "time": "203519",
+              "pid": "145",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E1",
+              "eventtemplate": "Receiving block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT>",
+              "parameterlist": "['blk_-1608999687919862906', '/10.250.14.224:42420', '/10.250.14.224:50010']"
+            },
+            {
+              "event_template_id": 3,
+              "event_template": "PacketResponder <NUM> for block <BLOCK_ID> terminating",
+              "extracted_variables": [
+                "1",
+                "blk_-1608999687919862906"
+              ],
+              "line_number": 5,
+              "content": "PacketResponder 1 for block blk_-1608999687919862906 terminating",
+              "raw_line": "PacketResponder 1 for block blk_-1608999687919862906 terminating",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "5",
+              "date": "081109",
+              "time": "203519",
+              "pid": "145",
+              "component": "dfs.DataNode$PacketResponder",
+              "eventid": "E3",
+              "eventtemplate": "PacketResponder <NUM> for block <BLOCK_ID> terminating",
+              "parameterlist": "['1', 'blk_-1608999687919862906']"
+            },
+            {
+              "event_template_id": 3,
+              "event_template": "PacketResponder <NUM> for block <BLOCK_ID> terminating",
+              "extracted_variables": [
+                "2",
+                "blk_-1608999687919862906"
+              ],
+              "line_number": 6,
+              "content": "PacketResponder 2 for block blk_-1608999687919862906 terminating",
+              "raw_line": "PacketResponder 2 for block blk_-1608999687919862906 terminating",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "6",
+              "date": "081109",
+              "time": "203519",
+              "pid": "145",
+              "component": "dfs.DataNode$PacketResponder",
+              "eventid": "E3",
+              "eventtemplate": "PacketResponder <NUM> for block <BLOCK_ID> terminating",
+              "parameterlist": "['2', 'blk_-1608999687919862906']"
+            },
+            {
+              "event_template_id": 4,
+              "event_template": "Received block <BLOCK_ID> of size <NUM> from /<IP_ADDR>",
+              "extracted_variables": [
+                "blk_-1608999687919862906",
+                "91178",
+                "/10.250.10.6"
+              ],
+              "line_number": 7,
+              "content": "Received block blk_-1608999687919862906 of size 91178 from /10.250.10.6",
+              "raw_line": "Received block blk_-1608999687919862906 of size 91178 from /10.250.10.6",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "7",
+              "date": "081109",
+              "time": "203519",
+              "pid": "145",
+              "component": "dfs.DataNode$PacketResponder",
+              "eventid": "E4",
+              "eventtemplate": "Received block <BLOCK_ID> of size <NUM> from /<IP_ADDR>",
+              "parameterlist": "['blk_-1608999687919862906', '91178', '/10.250.10.6']"
+            },
+            {
+              "event_template_id": 4,
+              "event_template": "Received block <BLOCK_ID> of size <NUM> from /<IP_ADDR>",
+              "extracted_variables": [
+                "blk_-1608999687919862906",
+                "91178",
+                "/10.250.19.102"
+              ],
+              "line_number": 8,
+              "content": "Received block blk_-1608999687919862906 of size 91178 from /10.250.19.102",
+              "raw_line": "Received block blk_-1608999687919862906 of size 91178 from /10.250.19.102",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "8",
+              "date": "081109",
+              "time": "203519",
+              "pid": "145",
+              "component": "dfs.DataNode$PacketResponder",
+              "eventid": "E4",
+              "eventtemplate": "Received block <BLOCK_ID> of size <NUM> from /<IP_ADDR>",
+              "parameterlist": "['blk_-1608999687919862906', '91178', '/10.250.19.102']"
+            },
+            {
+              "event_template_id": 3,
+              "event_template": "PacketResponder <NUM> for block <BLOCK_ID> terminating",
+              "extracted_variables": [
+                "0",
+                "blk_-1608999687919862906"
+              ],
+              "line_number": 9,
+              "content": "PacketResponder 0 for block blk_-1608999687919862906 terminating",
+              "raw_line": "PacketResponder 0 for block blk_-1608999687919862906 terminating",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "9",
+              "date": "081109",
+              "time": "203519",
+              "pid": "147",
+              "component": "dfs.DataNode$PacketResponder",
+              "eventid": "E3",
+              "eventtemplate": "PacketResponder <NUM> for block <BLOCK_ID> terminating",
+              "parameterlist": "['0', 'blk_-1608999687919862906']"
+            },
+            {
+              "event_template_id": 4,
+              "event_template": "Received block <BLOCK_ID> of size <NUM> from /<IP_ADDR>",
+              "extracted_variables": [
+                "blk_-1608999687919862906",
+                "91178",
+                "/10.250.14.224"
+              ],
+              "line_number": 10,
+              "content": "Received block blk_-1608999687919862906 of size 91178 from /10.250.14.224",
+              "raw_line": "Received block blk_-1608999687919862906 of size 91178 from /10.250.14.224",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "10",
+              "date": "081109",
+              "time": "203519",
+              "pid": "147",
+              "component": "dfs.DataNode$PacketResponder",
+              "eventid": "E4",
+              "eventtemplate": "Received block <BLOCK_ID> of size <NUM> from /<IP_ADDR>",
+              "parameterlist": "['blk_-1608999687919862906', '91178', '/10.250.14.224']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP_PORT> is added to <BLOCK_ID> size <NUM>",
+              "extracted_variables": [
+                "10.250.10.6:50010",
+                "blk_-1608999687919862906",
+                "91178"
+              ],
+              "line_number": 11,
+              "content": "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.250.10.6:50010 is added to blk_-1608999687919862906 size 91178",
+              "raw_line": "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.250.10.6:50010 is added to blk_-1608999687919862906 size 91178",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "11",
+              "date": "081109",
+              "time": "203519",
+              "pid": "29",
+              "component": "dfs.FSNamesystem",
+              "eventid": "E5",
+              "eventtemplate": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP_PORT> is added to <BLOCK_ID> size <NUM>",
+              "parameterlist": "['10.250.10.6:50010', 'blk_-1608999687919862906', '91178']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP_PORT> is added to <BLOCK_ID> size <NUM>",
+              "extracted_variables": [
+                "10.251.111.209:50010",
+                "blk_-1608999687919862906",
+                "91178"
+              ],
+              "line_number": 12,
+              "content": "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.111.209:50010 is added to blk_-1608999687919862906 size 91178",
+              "raw_line": "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.111.209:50010 is added to blk_-1608999687919862906 size 91178",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "12",
+              "date": "081109",
+              "time": "203519",
+              "pid": "30",
+              "component": "dfs.FSNamesystem",
+              "eventid": "E5",
+              "eventtemplate": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP_PORT> is added to <BLOCK_ID> size <NUM>",
+              "parameterlist": "['10.251.111.209:50010', 'blk_-1608999687919862906', '91178']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP_PORT> is added to <BLOCK_ID> size <NUM>",
+              "extracted_variables": [
+                "10.250.14.224:50010",
+                "blk_-1608999687919862906",
+                "91178"
+              ],
+              "line_number": 13,
+              "content": "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.250.14.224:50010 is added to blk_-1608999687919862906 size 91178",
+              "raw_line": "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.250.14.224:50010 is added to blk_-1608999687919862906 size 91178",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "13",
+              "date": "081109",
+              "time": "203519",
+              "pid": "31",
+              "component": "dfs.FSNamesystem",
+              "eventid": "E5",
+              "eventtemplate": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP_PORT> is added to <BLOCK_ID> size <NUM>",
+              "parameterlist": "['10.250.14.224:50010', 'blk_-1608999687919862906', '91178']"
+            },
+            {
+              "event_template_id": 6,
+              "event_template": "Received block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT> of size <NUM>",
+              "extracted_variables": [
+                "blk_-1608999687919862906",
+                "/10.251.215.16:52002",
+                "/10.251.215.16:50010",
+                "91178"
+              ],
+              "line_number": 17,
+              "content": "Received block blk_-1608999687919862906 src: /10.251.215.16:52002 dest: /10.251.215.16:50010 of size 91178",
+              "raw_line": "Received block blk_-1608999687919862906 src: /10.251.215.16:52002 dest: /10.251.215.16:50010 of size 91178",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "17",
+              "date": "081109",
+              "time": "203521",
+              "pid": "143",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E6",
+              "eventtemplate": "Received block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT> of size <NUM>",
+              "parameterlist": "['blk_-1608999687919862906', '/10.251.215.16:52002', '/10.251.215.16:50010', '91178']"
+            },
+            {
+              "event_template_id": 1,
+              "event_template": "Receiving block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT>",
+              "extracted_variables": [
+                "blk_-1608999687919862906",
+                "/10.251.215.16:52002",
+                "/10.251.215.16:50010"
+              ],
+              "line_number": 18,
+              "content": "Receiving block blk_-1608999687919862906 src: /10.251.215.16:52002 dest: /10.251.215.16:50010",
+              "raw_line": "Receiving block blk_-1608999687919862906 src: /10.251.215.16:52002 dest: /10.251.215.16:50010",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "18",
+              "date": "081109",
+              "time": "203521",
+              "pid": "143",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E1",
+              "eventtemplate": "Receiving block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT>",
+              "parameterlist": "['blk_-1608999687919862906', '/10.251.215.16:52002', '/10.251.215.16:50010']"
+            },
+            {
+              "event_template_id": 7,
+              "event_template": "<IP_PORT>:Transmitted block <BLOCK_ID> to /<IP_PORT>",
+              "extracted_variables": [
+                "10.250.14.224:50010:Transmitted",
+                "blk_-1608999687919862906",
+                "/10.251.215.16:50010"
+              ],
+              "line_number": 25,
+              "content": "10.250.14.224:50010:Transmitted block blk_-1608999687919862906 to /10.251.215.16:50010",
+              "raw_line": "10.250.14.224:50010:Transmitted block blk_-1608999687919862906 to /10.251.215.16:50010",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "25",
+              "date": "081109",
+              "time": "203521",
+              "pid": "147",
+              "component": "dfs.DataNode$DataTransfer",
+              "eventid": "E7",
+              "eventtemplate": "<IP_PORT>:Transmitted block <BLOCK_ID> to /<IP_PORT>",
+              "parameterlist": "['10.250.14.224:50010:Transmitted', 'blk_-1608999687919862906', '/10.251.215.16:50010']"
+            },
+            {
+              "event_template_id": 6,
+              "event_template": "Received block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT> of size <NUM>",
+              "extracted_variables": [
+                "blk_-1608999687919862906",
+                "/10.250.14.224:35754",
+                "/10.250.14.224:50010",
+                "91178"
+              ],
+              "line_number": 26,
+              "content": "Received block blk_-1608999687919862906 src: /10.250.14.224:35754 dest: /10.250.14.224:50010 of size 91178",
+              "raw_line": "Received block blk_-1608999687919862906 src: /10.250.14.224:35754 dest: /10.250.14.224:50010 of size 91178",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "26",
+              "date": "081109",
+              "time": "203521",
+              "pid": "147",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E6",
+              "eventtemplate": "Received block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT> of size <NUM>",
+              "parameterlist": "['blk_-1608999687919862906', '/10.250.14.224:35754', '/10.250.14.224:50010', '91178']"
+            },
+            {
+              "event_template_id": 1,
+              "event_template": "Receiving block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT>",
+              "extracted_variables": [
+                "blk_-1608999687919862906",
+                "/10.250.14.224:35754",
+                "/10.250.14.224:50010"
+              ],
+              "line_number": 27,
+              "content": "Receiving block blk_-1608999687919862906 src: /10.250.14.224:35754 dest: /10.250.14.224:50010",
+              "raw_line": "Receiving block blk_-1608999687919862906 src: /10.250.14.224:35754 dest: /10.250.14.224:50010",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "27",
+              "date": "081109",
+              "time": "203521",
+              "pid": "147",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E1",
+              "eventtemplate": "Receiving block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT>",
+              "parameterlist": "['blk_-1608999687919862906', '/10.250.14.224:35754', '/10.250.14.224:50010']"
+            },
+            {
+              "event_template_id": 8,
+              "event_template": "<IP_PORT> Starting thread to transfer block <BLOCK_ID> to <IP_PORT>, <IP_PORT>",
+              "extracted_variables": [
+                "10.250.14.224:50010",
+                "blk_-1608999687919862906",
+                "10.251.215.16:50010,",
+                "10.251.71.193:50010"
+              ],
+              "line_number": 30,
+              "content": "10.250.14.224:50010 Starting thread to transfer block blk_-1608999687919862906 to 10.251.215.16:50010, 10.251.71.193:50010",
+              "raw_line": "10.250.14.224:50010 Starting thread to transfer block blk_-1608999687919862906 to 10.251.215.16:50010, 10.251.71.193:50010",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "30",
+              "date": "081109",
+              "time": "203521",
+              "pid": "19",
+              "component": "dfs.DataNode",
+              "eventid": "E8",
+              "eventtemplate": "<IP_PORT> Starting thread to transfer block <BLOCK_ID> to <IP_PORT>, <IP_PORT>",
+              "parameterlist": "['10.250.14.224:50010', 'blk_-1608999687919862906', '10.251.215.16:50010,', '10.251.71.193:50010']"
+            },
+            {
+              "event_template_id": 9,
+              "event_template": "BLOCK* ask <IP_PORT> to replicate <BLOCK_ID> to datanode(s) <IP_PORT> <IP_PORT>",
+              "extracted_variables": [
+                "10.250.14.224:50010",
+                "blk_-1608999687919862906",
+                "10.251.215.16:50010",
+                "10.251.71.193:50010"
+              ],
+              "line_number": 31,
+              "content": "BLOCK* ask 10.250.14.224:50010 to replicate blk_-1608999687919862906 to datanode(s) 10.251.215.16:50010 10.251.71.193:50010",
+              "raw_line": "BLOCK* ask 10.250.14.224:50010 to replicate blk_-1608999687919862906 to datanode(s) 10.251.215.16:50010 10.251.71.193:50010",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "31",
+              "date": "081109",
+              "time": "203521",
+              "pid": "19",
+              "component": "dfs.FSNamesystem",
+              "eventid": "E9",
+              "eventtemplate": "BLOCK* ask <IP_PORT> to replicate <BLOCK_ID> to datanode(s) <IP_PORT> <IP_PORT>",
+              "parameterlist": "['10.250.14.224:50010', 'blk_-1608999687919862906', '10.251.215.16:50010', '10.251.71.193:50010']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP_PORT> is added to <BLOCK_ID> size <*>",
+              "extracted_variables": [
+                "10.251.71.193:50010",
+                "blk_-1608999687919862906",
+                "91178"
+              ],
+              "line_number": 34,
+              "content": "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.71.193:50010 is added to blk_-1608999687919862906 size 91178",
+              "raw_line": "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.71.193:50010 is added to blk_-1608999687919862906 size 91178",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "34",
+              "date": "081109",
+              "time": "203521",
+              "pid": "30",
+              "component": "dfs.FSNamesystem",
+              "eventid": "E5",
+              "eventtemplate": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP_PORT> is added to <BLOCK_ID> size <*>",
+              "parameterlist": "['10.251.71.193:50010', 'blk_-1608999687919862906', '91178']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP_PORT> is added to <BLOCK_ID> size <*>",
+              "extracted_variables": [
+                "10.251.215.16:50010",
+                "blk_-1608999687919862906",
+                "91178"
+              ],
+              "line_number": 36,
+              "content": "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.215.16:50010 is added to blk_-1608999687919862906 size 91178",
+              "raw_line": "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.215.16:50010 is added to blk_-1608999687919862906 size 91178",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "36",
+              "date": "081109",
+              "time": "203521",
+              "pid": "34",
+              "component": "dfs.FSNamesystem",
+              "eventid": "E5",
+              "eventtemplate": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP_PORT> is added to <BLOCK_ID> size <*>",
+              "parameterlist": "['10.251.215.16:50010', 'blk_-1608999687919862906', '91178']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.111.209:50010",
+                "blk_-1608999687919862906",
+                "/10.250.19.102"
+              ],
+              "line_number": 48,
+              "content": "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.250.19.102",
+              "raw_line": "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.250.19.102",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "48",
+              "date": "081109",
+              "time": "203523",
+              "pid": "149",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.111.209:50010', 'blk_-1608999687919862906', '/10.250.19.102']"
+            },
+            {
+              "event_template_id": 9,
+              "event_template": "BLOCK* ask <IP_PORT> to replicate <BLOCK_ID> to datanode(s) <IP_PORT> <IP_PORT>",
+              "extracted_variables": [
+                "10.251.215.16:50010",
+                "blk_-1608999687919862906",
+                "10.251.74.79:50010",
+                "10.251.107.19:50010"
+              ],
+              "line_number": 61,
+              "content": "BLOCK* ask 10.251.215.16:50010 to replicate blk_-1608999687919862906 to datanode(s) 10.251.74.79:50010 10.251.107.19:50010",
+              "raw_line": "BLOCK* ask 10.251.215.16:50010 to replicate blk_-1608999687919862906 to datanode(s) 10.251.74.79:50010 10.251.107.19:50010",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "61",
+              "date": "081109",
+              "time": "203524",
+              "pid": "19",
+              "component": "dfs.FSNamesystem",
+              "eventid": "E9",
+              "eventtemplate": "BLOCK* ask <IP_PORT> to replicate <BLOCK_ID> to datanode(s) <IP_PORT> <IP_PORT>",
+              "parameterlist": "['10.251.215.16:50010', 'blk_-1608999687919862906', '10.251.74.79:50010', '10.251.107.19:50010']"
+            },
+            {
+              "event_template_id": 6,
+              "event_template": "Received block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT> of size <NUM>",
+              "extracted_variables": [
+                "blk_-1608999687919862906",
+                "/10.251.215.16:51177",
+                "/10.251.215.16:50010",
+                "91178"
+              ],
+              "line_number": 66,
+              "content": "Received block blk_-1608999687919862906 src: /10.251.215.16:51177 dest: /10.251.215.16:50010 of size 91178",
+              "raw_line": "Received block blk_-1608999687919862906 src: /10.251.215.16:51177 dest: /10.251.215.16:50010 of size 91178",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "66",
+              "date": "081109",
+              "time": "203526",
+              "pid": "146",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E6",
+              "eventtemplate": "Received block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT> of size <NUM>",
+              "parameterlist": "['blk_-1608999687919862906', '/10.251.215.16:51177', '/10.251.215.16:50010', '91178']"
+            },
+            {
+              "event_template_id": 6,
+              "event_template": "Received block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT> of size <NUM>",
+              "extracted_variables": [
+                "blk_-1608999687919862906",
+                "/10.251.74.79:60333",
+                "/10.251.74.79:50010",
+                "91178"
+              ],
+              "line_number": 67,
+              "content": "Received block blk_-1608999687919862906 src: /10.251.74.79:60333 dest: /10.251.74.79:50010 of size 91178",
+              "raw_line": "Received block blk_-1608999687919862906 src: /10.251.74.79:60333 dest: /10.251.74.79:50010 of size 91178",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "67",
+              "date": "081109",
+              "time": "203526",
+              "pid": "146",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E6",
+              "eventtemplate": "Received block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT> of size <NUM>",
+              "parameterlist": "['blk_-1608999687919862906', '/10.251.74.79:60333', '/10.251.74.79:50010', '91178']"
+            },
+            {
+              "event_template_id": 1,
+              "event_template": "Receiving block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT>",
+              "extracted_variables": [
+                "blk_-1608999687919862906",
+                "/10.251.215.16:51177",
+                "/10.251.215.16:50010"
+              ],
+              "line_number": 68,
+              "content": "Receiving block blk_-1608999687919862906 src: /10.251.215.16:51177 dest: /10.251.215.16:50010",
+              "raw_line": "Receiving block blk_-1608999687919862906 src: /10.251.215.16:51177 dest: /10.251.215.16:50010",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "68",
+              "date": "081109",
+              "time": "203526",
+              "pid": "146",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E1",
+              "eventtemplate": "Receiving block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT>",
+              "parameterlist": "['blk_-1608999687919862906', '/10.251.215.16:51177', '/10.251.215.16:50010']"
+            },
+            {
+              "event_template_id": 1,
+              "event_template": "Receiving block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT>",
+              "extracted_variables": [
+                "blk_-1608999687919862906",
+                "/10.251.74.79:60333",
+                "/10.251.74.79:50010"
+              ],
+              "line_number": 69,
+              "content": "Receiving block blk_-1608999687919862906 src: /10.251.74.79:60333 dest: /10.251.74.79:50010",
+              "raw_line": "Receiving block blk_-1608999687919862906 src: /10.251.74.79:60333 dest: /10.251.74.79:50010",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "69",
+              "date": "081109",
+              "time": "203526",
+              "pid": "146",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E1",
+              "eventtemplate": "Receiving block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT>",
+              "parameterlist": "['blk_-1608999687919862906', '/10.251.74.79:60333', '/10.251.74.79:50010']"
+            },
+            {
+              "event_template_id": 7,
+              "event_template": "<IP_PORT>:Transmitted block <BLOCK_ID> to /<IP_PORT>",
+              "extracted_variables": [
+                "10.251.215.16:50010:Transmitted",
+                "blk_-1608999687919862906",
+                "/10.251.74.79:50010"
+              ],
+              "line_number": 73,
+              "content": "10.251.215.16:50010:Transmitted block blk_-1608999687919862906 to /10.251.74.79:50010",
+              "raw_line": "10.251.215.16:50010:Transmitted block blk_-1608999687919862906 to /10.251.74.79:50010",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "73",
+              "date": "081109",
+              "time": "203526",
+              "pid": "152",
+              "component": "dfs.DataNode$DataTransfer",
+              "eventid": "E7",
+              "eventtemplate": "<IP_PORT>:Transmitted block <BLOCK_ID> to /<IP_PORT>",
+              "parameterlist": "['10.251.215.16:50010:Transmitted', 'blk_-1608999687919862906', '/10.251.74.79:50010']"
+            },
+            {
+              "event_template_id": 8,
+              "event_template": "<IP_PORT> Starting thread to transfer block <BLOCK_ID> to <IP_PORT>, <IP_PORT>",
+              "extracted_variables": [
+                "10.251.215.16:50010",
+                "blk_-1608999687919862906",
+                "10.251.74.79:50010,",
+                "10.251.107.19:50010"
+              ],
+              "line_number": 74,
+              "content": "10.251.215.16:50010 Starting thread to transfer block blk_-1608999687919862906 to 10.251.74.79:50010, 10.251.107.19:50010",
+              "raw_line": "10.251.215.16:50010 Starting thread to transfer block blk_-1608999687919862906 to 10.251.74.79:50010, 10.251.107.19:50010",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "74",
+              "date": "081109",
+              "time": "203526",
+              "pid": "19",
+              "component": "dfs.DataNode",
+              "eventid": "E8",
+              "eventtemplate": "<IP_PORT> Starting thread to transfer block <BLOCK_ID> to <IP_PORT>, <IP_PORT>",
+              "parameterlist": "['10.251.215.16:50010', 'blk_-1608999687919862906', '10.251.74.79:50010,', '10.251.107.19:50010']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP_PORT> is added to <BLOCK_ID> size <*>",
+              "extracted_variables": [
+                "10.251.74.79:50010",
+                "blk_-1608999687919862906",
+                "91178"
+              ],
+              "line_number": 75,
+              "content": "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.74.79:50010 is added to blk_-1608999687919862906 size 91178",
+              "raw_line": "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.74.79:50010 is added to blk_-1608999687919862906 size 91178",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "75",
+              "date": "081109",
+              "time": "203526",
+              "pid": "28",
+              "component": "dfs.FSNamesystem",
+              "eventid": "E5",
+              "eventtemplate": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP_PORT> is added to <BLOCK_ID> size <*>",
+              "parameterlist": "['10.251.74.79:50010', 'blk_-1608999687919862906', '91178']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP_PORT> is added to <BLOCK_ID> size <*>",
+              "extracted_variables": [
+                "10.251.107.19:50010",
+                "blk_-1608999687919862906",
+                "91178"
+              ],
+              "line_number": 76,
+              "content": "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.107.19:50010 is added to blk_-1608999687919862906 size 91178",
+              "raw_line": "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.107.19:50010 is added to blk_-1608999687919862906 size 91178",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "76",
+              "date": "081109",
+              "time": "203526",
+              "pid": "29",
+              "component": "dfs.FSNamesystem",
+              "eventid": "E5",
+              "eventtemplate": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP_PORT> is added to <BLOCK_ID> size <*>",
+              "parameterlist": "['10.251.107.19:50010', 'blk_-1608999687919862906', '91178']"
+            },
+            {
+              "event_template_id": 1,
+              "event_template": "Receiving block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT>",
+              "extracted_variables": [
+                "blk_-1608999687919862906",
+                "/10.251.31.5:53020",
+                "/10.251.31.5:50010"
+              ],
+              "line_number": 77,
+              "content": "Receiving block blk_-1608999687919862906 src: /10.251.31.5:53020 dest: /10.251.31.5:50010",
+              "raw_line": "Receiving block blk_-1608999687919862906 src: /10.251.31.5:53020 dest: /10.251.31.5:50010",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "77",
+              "date": "081109",
+              "time": "203527",
+              "pid": "145",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E1",
+              "eventtemplate": "Receiving block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT>",
+              "parameterlist": "['blk_-1608999687919862906', '/10.251.31.5:53020', '/10.251.31.5:50010']"
+            },
+            {
+              "event_template_id": 6,
+              "event_template": "Received block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT> of size <NUM>",
+              "extracted_variables": [
+                "blk_-1608999687919862906",
+                "/10.251.107.19:56341",
+                "/10.251.107.19:50010",
+                "91178"
+              ],
+              "line_number": 78,
+              "content": "Received block blk_-1608999687919862906 src: /10.251.107.19:56341 dest: /10.251.107.19:50010 of size 91178",
+              "raw_line": "Received block blk_-1608999687919862906 src: /10.251.107.19:56341 dest: /10.251.107.19:50010 of size 91178",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "78",
+              "date": "081109",
+              "time": "203527",
+              "pid": "147",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E6",
+              "eventtemplate": "Received block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT> of size <NUM>",
+              "parameterlist": "['blk_-1608999687919862906', '/10.251.107.19:56341', '/10.251.107.19:50010', '91178']"
+            },
+            {
+              "event_template_id": 1,
+              "event_template": "Receiving block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT>",
+              "extracted_variables": [
+                "blk_-1608999687919862906",
+                "/10.251.107.19:56341",
+                "/10.251.107.19:50010"
+              ],
+              "line_number": 79,
+              "content": "Receiving block blk_-1608999687919862906 src: /10.251.107.19:56341 dest: /10.251.107.19:50010",
+              "raw_line": "Receiving block blk_-1608999687919862906 src: /10.251.107.19:56341 dest: /10.251.107.19:50010",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "79",
+              "date": "081109",
+              "time": "203527",
+              "pid": "147",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E1",
+              "eventtemplate": "Receiving block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT>",
+              "parameterlist": "['blk_-1608999687919862906', '/10.251.107.19:56341', '/10.251.107.19:50010']"
+            },
+            {
+              "event_template_id": 7,
+              "event_template": "<IP_PORT>:Transmitted block <BLOCK_ID> to /<IP_PORT>",
+              "extracted_variables": [
+                "10.251.107.19:50010:Transmitted",
+                "blk_-1608999687919862906",
+                "/10.251.31.5:50010"
+              ],
+              "line_number": 80,
+              "content": "10.251.107.19:50010:Transmitted block blk_-1608999687919862906 to /10.251.31.5:50010",
+              "raw_line": "10.251.107.19:50010:Transmitted block blk_-1608999687919862906 to /10.251.31.5:50010",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "80",
+              "date": "081109",
+              "time": "203527",
+              "pid": "148",
+              "component": "dfs.DataNode$DataTransfer",
+              "eventid": "E7",
+              "eventtemplate": "<IP_PORT>:Transmitted block <BLOCK_ID> to /<IP_PORT>",
+              "parameterlist": "['10.251.107.19:50010:Transmitted', 'blk_-1608999687919862906', '/10.251.31.5:50010']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.250.10.6:50010",
+                "blk_-1608999687919862906",
+                "/10.250.18.114"
+              ],
+              "line_number": 81,
+              "content": "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.250.18.114",
+              "raw_line": "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.250.18.114",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "81",
+              "date": "081109",
+              "time": "203527",
+              "pid": "149",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.250.10.6:50010', 'blk_-1608999687919862906', '/10.250.18.114']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.250.10.6:50010",
+                "blk_-1608999687919862906",
+                "/10.251.203.149"
+              ],
+              "line_number": 82,
+              "content": "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.203.149",
+              "raw_line": "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.203.149",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "82",
+              "date": "081109",
+              "time": "203527",
+              "pid": "150",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.250.10.6:50010', 'blk_-1608999687919862906', '/10.251.203.149']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.250.14.224:50010",
+                "blk_-1608999687919862906",
+                "/10.251.31.5"
+              ],
+              "line_number": 84,
+              "content": "10.250.14.224:50010 Served block blk_-1608999687919862906 to /10.251.31.5",
+              "raw_line": "10.250.14.224:50010 Served block blk_-1608999687919862906 to /10.251.31.5",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "84",
+              "date": "081109",
+              "time": "203527",
+              "pid": "150",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.250.14.224:50010', 'blk_-1608999687919862906', '/10.251.31.5']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.250.10.6:50010",
+                "blk_-1608999687919862906",
+                "/10.251.125.193"
+              ],
+              "line_number": 86,
+              "content": "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.125.193",
+              "raw_line": "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.125.193",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "86",
+              "date": "081109",
+              "time": "203527",
+              "pid": "151",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.250.10.6:50010', 'blk_-1608999687919862906', '/10.251.125.193']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.250.14.224:50010",
+                "blk_-1608999687919862906",
+                "/10.251.30.134"
+              ],
+              "line_number": 88,
+              "content": "10.250.14.224:50010 Served block blk_-1608999687919862906 to /10.251.30.134",
+              "raw_line": "10.250.14.224:50010 Served block blk_-1608999687919862906 to /10.251.30.134",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "88",
+              "date": "081109",
+              "time": "203527",
+              "pid": "151",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.250.14.224:50010', 'blk_-1608999687919862906', '/10.251.30.134']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.250.10.6:50010",
+                "blk_-1608999687919862906",
+                "/10.251.65.203"
+              ],
+              "line_number": 90,
+              "content": "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.65.203",
+              "raw_line": "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.65.203",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "90",
+              "date": "081109",
+              "time": "203527",
+              "pid": "152",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.250.10.6:50010', 'blk_-1608999687919862906', '/10.251.65.203']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.250.14.224:50010",
+                "blk_-1608999687919862906",
+                "/10.251.127.191"
+              ],
+              "line_number": 92,
+              "content": "10.250.14.224:50010 Served block blk_-1608999687919862906 to /10.251.127.191",
+              "raw_line": "10.250.14.224:50010 Served block blk_-1608999687919862906 to /10.251.127.191",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "92",
+              "date": "081109",
+              "time": "203527",
+              "pid": "152",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.250.14.224:50010', 'blk_-1608999687919862906', '/10.251.127.191']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.111.209:50010",
+                "blk_-1608999687919862906",
+                "/10.251.111.209"
+              ],
+              "line_number": 93,
+              "content": "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.111.209",
+              "raw_line": "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.111.209",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "93",
+              "date": "081109",
+              "time": "203527",
+              "pid": "152",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.111.209:50010', 'blk_-1608999687919862906', '/10.251.111.209']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.215.16:50010",
+                "blk_-1608999687919862906",
+                "/10.251.215.16"
+              ],
+              "line_number": 98,
+              "content": "10.251.215.16:50010 Served block blk_-1608999687919862906 to /10.251.215.16",
+              "raw_line": "10.251.215.16:50010 Served block blk_-1608999687919862906 to /10.251.215.16",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "98",
+              "date": "081109",
+              "time": "203527",
+              "pid": "153",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.215.16:50010', 'blk_-1608999687919862906', '/10.251.215.16']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.215.16:50010",
+                "blk_-1608999687919862906",
+                "/10.250.19.227"
+              ],
+              "line_number": 102,
+              "content": "10.251.215.16:50010 Served block blk_-1608999687919862906 to /10.250.19.227",
+              "raw_line": "10.251.215.16:50010 Served block blk_-1608999687919862906 to /10.250.19.227",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "102",
+              "date": "081109",
+              "time": "203527",
+              "pid": "154",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.215.16:50010', 'blk_-1608999687919862906', '/10.250.19.227']"
+            },
+            {
+              "event_template_id": 8,
+              "event_template": "<IP_PORT> Starting thread to transfer block <BLOCK_ID> to <IP_PORT>, <IP_PORT>",
+              "extracted_variables": [
+                "10.251.107.19:50010",
+                "blk_-1608999687919862906",
+                "10.251.31.5:50010,",
+                "10.251.71.240:50010"
+              ],
+              "line_number": 117,
+              "content": "10.251.107.19:50010 Starting thread to transfer block blk_-1608999687919862906 to 10.251.31.5:50010, 10.251.71.240:50010",
+              "raw_line": "10.251.107.19:50010 Starting thread to transfer block blk_-1608999687919862906 to 10.251.31.5:50010, 10.251.71.240:50010",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "117",
+              "date": "081109",
+              "time": "203527",
+              "pid": "19",
+              "component": "dfs.DataNode",
+              "eventid": "E8",
+              "eventtemplate": "<IP_PORT> Starting thread to transfer block <BLOCK_ID> to <IP_PORT>, <IP_PORT>",
+              "parameterlist": "['10.251.107.19:50010', 'blk_-1608999687919862906', '10.251.31.5:50010,', '10.251.71.240:50010']"
+            },
+            {
+              "event_template_id": 9,
+              "event_template": "BLOCK* ask <IP_PORT> to replicate <BLOCK_ID> to datanode(s) <IP_PORT> <IP_PORT>",
+              "extracted_variables": [
+                "10.251.107.19:50010",
+                "blk_-1608999687919862906",
+                "10.251.31.5:50010",
+                "10.251.71.240:50010"
+              ],
+              "line_number": 118,
+              "content": "BLOCK* ask 10.251.107.19:50010 to replicate blk_-1608999687919862906 to datanode(s) 10.251.31.5:50010 10.251.71.240:50010",
+              "raw_line": "BLOCK* ask 10.251.107.19:50010 to replicate blk_-1608999687919862906 to datanode(s) 10.251.31.5:50010 10.251.71.240:50010",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "118",
+              "date": "081109",
+              "time": "203527",
+              "pid": "19",
+              "component": "dfs.FSNamesystem",
+              "eventid": "E9",
+              "eventtemplate": "BLOCK* ask <IP_PORT> to replicate <BLOCK_ID> to datanode(s) <IP_PORT> <IP_PORT>",
+              "parameterlist": "['10.251.107.19:50010', 'blk_-1608999687919862906', '10.251.31.5:50010', '10.251.71.240:50010']"
+            },
+            {
+              "event_template_id": 6,
+              "event_template": "Received block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT> of size <NUM>",
+              "extracted_variables": [
+                "blk_-1608999687919862906",
+                "/10.251.31.5:53020",
+                "/10.251.31.5:50010",
+                "91178"
+              ],
+              "line_number": 119,
+              "content": "Received block blk_-1608999687919862906 src: /10.251.31.5:53020 dest: /10.251.31.5:50010 of size 91178",
+              "raw_line": "Received block blk_-1608999687919862906 src: /10.251.31.5:53020 dest: /10.251.31.5:50010 of size 91178",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "119",
+              "date": "081109",
+              "time": "203528",
+              "pid": "145",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E6",
+              "eventtemplate": "Received block <BLOCK_ID> src: /<IP_PORT> dest: /<IP_PORT> of size <NUM>",
+              "parameterlist": "['blk_-1608999687919862906', '/10.251.31.5:53020', '/10.251.31.5:50010', '91178']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.74.79:50010",
+                "blk_-1608999687919862906",
+                "/10.251.127.243"
+              ],
+              "line_number": 120,
+              "content": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.127.243",
+              "raw_line": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.127.243",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "120",
+              "date": "081109",
+              "time": "203528",
+              "pid": "148",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.74.79:50010', 'blk_-1608999687919862906', '/10.251.127.243']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.31.5:50010",
+                "blk_-1608999687919862906",
+                "/10.251.30.6"
+              ],
+              "line_number": 121,
+              "content": "10.251.31.5:50010 Served block blk_-1608999687919862906 to /10.251.30.6",
+              "raw_line": "10.251.31.5:50010 Served block blk_-1608999687919862906 to /10.251.30.6",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "121",
+              "date": "081109",
+              "time": "203528",
+              "pid": "149",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.31.5:50010', 'blk_-1608999687919862906', '/10.251.30.6']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.74.79:50010",
+                "blk_-1608999687919862906",
+                "/10.250.19.16"
+              ],
+              "line_number": 122,
+              "content": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.250.19.16",
+              "raw_line": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.250.19.16",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "122",
+              "date": "081109",
+              "time": "203528",
+              "pid": "149",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.74.79:50010', 'blk_-1608999687919862906', '/10.250.19.16']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.31.5:50010",
+                "blk_-1608999687919862906",
+                "/10.251.214.225"
+              ],
+              "line_number": 123,
+              "content": "10.251.31.5:50010 Served block blk_-1608999687919862906 to /10.251.214.225",
+              "raw_line": "10.251.31.5:50010 Served block blk_-1608999687919862906 to /10.251.214.225",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "123",
+              "date": "081109",
+              "time": "203528",
+              "pid": "150",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.31.5:50010', 'blk_-1608999687919862906', '/10.251.214.225']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.74.79:50010",
+                "blk_-1608999687919862906",
+                "/10.251.74.192"
+              ],
+              "line_number": 124,
+              "content": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.74.192",
+              "raw_line": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.74.192",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "124",
+              "date": "081109",
+              "time": "203528",
+              "pid": "150",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.74.79:50010', 'blk_-1608999687919862906', '/10.251.74.192']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.74.79:50010",
+                "blk_-1608999687919862906",
+                "/10.250.17.177"
+              ],
+              "line_number": 125,
+              "content": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.250.17.177",
+              "raw_line": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.250.17.177",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "125",
+              "date": "081109",
+              "time": "203528",
+              "pid": "151",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.74.79:50010', 'blk_-1608999687919862906', '/10.250.17.177']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.31.5:50010",
+                "blk_-1608999687919862906",
+                "/10.251.71.16"
+              ],
+              "line_number": 126,
+              "content": "10.251.31.5:50010 Served block blk_-1608999687919862906 to /10.251.71.16",
+              "raw_line": "10.251.31.5:50010 Served block blk_-1608999687919862906 to /10.251.71.16",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "126",
+              "date": "081109",
+              "time": "203528",
+              "pid": "152",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.31.5:50010', 'blk_-1608999687919862906', '/10.251.71.16']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.74.79:50010",
+                "blk_-1608999687919862906",
+                "/10.251.31.242"
+              ],
+              "line_number": 127,
+              "content": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.31.242",
+              "raw_line": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.31.242",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "127",
+              "date": "081109",
+              "time": "203528",
+              "pid": "152",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.74.79:50010', 'blk_-1608999687919862906', '/10.251.31.242']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.250.10.6:50010",
+                "blk_-1608999687919862906",
+                "/10.250.17.225"
+              ],
+              "line_number": 128,
+              "content": "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.250.17.225",
+              "raw_line": "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.250.17.225",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "128",
+              "date": "081109",
+              "time": "203528",
+              "pid": "153",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.250.10.6:50010', 'blk_-1608999687919862906', '/10.250.17.225']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.250.14.224:50010",
+                "blk_-1608999687919862906",
+                "/10.251.30.85"
+              ],
+              "line_number": 129,
+              "content": "10.250.14.224:50010 Served block blk_-1608999687919862906 to /10.251.30.85",
+              "raw_line": "10.250.14.224:50010 Served block blk_-1608999687919862906 to /10.251.30.85",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "129",
+              "date": "081109",
+              "time": "203528",
+              "pid": "153",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.250.14.224:50010', 'blk_-1608999687919862906', '/10.251.30.85']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.111.209:50010",
+                "blk_-1608999687919862906",
+                "/10.251.66.63"
+              ],
+              "line_number": 130,
+              "content": "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.66.63",
+              "raw_line": "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.66.63",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "130",
+              "date": "081109",
+              "time": "203528",
+              "pid": "153",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.111.209:50010', 'blk_-1608999687919862906', '/10.251.66.63']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.74.79:50010",
+                "blk_-1608999687919862906",
+                "/10.251.66.3"
+              ],
+              "line_number": 131,
+              "content": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.66.3",
+              "raw_line": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.66.3",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "131",
+              "date": "081109",
+              "time": "203528",
+              "pid": "153",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.74.79:50010', 'blk_-1608999687919862906', '/10.251.66.3']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.250.10.6:50010",
+                "blk_-1608999687919862906",
+                "/10.251.126.227"
+              ],
+              "line_number": 132,
+              "content": "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.126.227",
+              "raw_line": "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.126.227",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "132",
+              "date": "081109",
+              "time": "203528",
+              "pid": "154",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.250.10.6:50010', 'blk_-1608999687919862906', '/10.251.126.227']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.215.16:50010",
+                "blk_-1608999687919862906",
+                "/10.251.126.5"
+              ],
+              "line_number": 134,
+              "content": "10.251.215.16:50010 Served block blk_-1608999687919862906 to /10.251.126.5",
+              "raw_line": "10.251.215.16:50010 Served block blk_-1608999687919862906 to /10.251.126.5",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "134",
+              "date": "081109",
+              "time": "203528",
+              "pid": "155",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.215.16:50010', 'blk_-1608999687919862906', '/10.251.126.5']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.74.79:50010",
+                "blk_-1608999687919862906",
+                "/10.251.43.115"
+              ],
+              "line_number": 136,
+              "content": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.43.115",
+              "raw_line": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.43.115",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "136",
+              "date": "081109",
+              "time": "203528",
+              "pid": "155",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.74.79:50010', 'blk_-1608999687919862906', '/10.251.43.115']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP_PORT> is added to <BLOCK_ID> size <*>",
+              "extracted_variables": [
+                "10.251.31.5:50010",
+                "blk_-1608999687919862906",
+                "91178"
+              ],
+              "line_number": 157,
+              "content": "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.31.5:50010 is added to blk_-1608999687919862906 size 91178",
+              "raw_line": "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.31.5:50010 is added to blk_-1608999687919862906 size 91178",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "157",
+              "date": "081109",
+              "time": "203528",
+              "pid": "33",
+              "component": "dfs.FSNamesystem",
+              "eventid": "E5",
+              "eventtemplate": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP_PORT> is added to <BLOCK_ID> size <*>",
+              "parameterlist": "['10.251.31.5:50010', 'blk_-1608999687919862906', '91178']"
+            },
+            {
+              "event_template_id": 5,
+              "event_template": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP_PORT> is added to <BLOCK_ID> size <*>",
+              "extracted_variables": [
+                "10.251.71.240:50010",
+                "blk_-1608999687919862906",
+                "91178"
+              ],
+              "line_number": 158,
+              "content": "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.71.240:50010 is added to blk_-1608999687919862906 size 91178",
+              "raw_line": "BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.71.240:50010 is added to blk_-1608999687919862906 size 91178",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "158",
+              "date": "081109",
+              "time": "203528",
+              "pid": "33",
+              "component": "dfs.FSNamesystem",
+              "eventid": "E5",
+              "eventtemplate": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP_PORT> is added to <BLOCK_ID> size <*>",
+              "parameterlist": "['10.251.71.240:50010', 'blk_-1608999687919862906', '91178']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.31.5:50010",
+                "blk_-1608999687919862906",
+                "/10.251.31.180"
+              ],
+              "line_number": 160,
+              "content": "10.251.31.5:50010 Served block blk_-1608999687919862906 to /10.251.31.180",
+              "raw_line": "10.251.31.5:50010 Served block blk_-1608999687919862906 to /10.251.31.180",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "160",
+              "date": "081109",
+              "time": "203529",
+              "pid": "153",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.31.5:50010', 'blk_-1608999687919862906', '/10.251.31.180']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.250.14.224:50010",
+                "blk_-1608999687919862906",
+                "/10.251.67.113"
+              ],
+              "line_number": 161,
+              "content": "10.250.14.224:50010 Served block blk_-1608999687919862906 to /10.251.67.113",
+              "raw_line": "10.250.14.224:50010 Served block blk_-1608999687919862906 to /10.251.67.113",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "161",
+              "date": "081109",
+              "time": "203529",
+              "pid": "154",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.250.14.224:50010', 'blk_-1608999687919862906', '/10.251.67.113']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.111.209:50010",
+                "blk_-1608999687919862906",
+                "/10.251.215.192"
+              ],
+              "line_number": 162,
+              "content": "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.215.192",
+              "raw_line": "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.215.192",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "162",
+              "date": "081109",
+              "time": "203529",
+              "pid": "154",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.111.209:50010', 'blk_-1608999687919862906', '/10.251.215.192']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.31.5:50010",
+                "blk_-1608999687919862906",
+                "/10.251.31.160"
+              ],
+              "line_number": 163,
+              "content": "10.251.31.5:50010 Served block blk_-1608999687919862906 to /10.251.31.160",
+              "raw_line": "10.251.31.5:50010 Served block blk_-1608999687919862906 to /10.251.31.160",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "163",
+              "date": "081109",
+              "time": "203529",
+              "pid": "154",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.31.5:50010', 'blk_-1608999687919862906', '/10.251.31.160']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.250.10.6:50010",
+                "blk_-1608999687919862906",
+                "/10.251.67.225"
+              ],
+              "line_number": 164,
+              "content": "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.67.225",
+              "raw_line": "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.67.225",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "164",
+              "date": "081109",
+              "time": "203529",
+              "pid": "155",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.250.10.6:50010', 'blk_-1608999687919862906', '/10.251.67.225']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.250.14.224:50010",
+                "blk_-1608999687919862906",
+                "/10.251.42.9"
+              ],
+              "line_number": 165,
+              "content": "10.250.14.224:50010 Served block blk_-1608999687919862906 to /10.251.42.9",
+              "raw_line": "10.250.14.224:50010 Served block blk_-1608999687919862906 to /10.251.42.9",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "165",
+              "date": "081109",
+              "time": "203529",
+              "pid": "155",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.250.14.224:50010', 'blk_-1608999687919862906', '/10.251.42.9']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.111.209:50010",
+                "blk_-1608999687919862906",
+                "/10.251.66.192"
+              ],
+              "line_number": 166,
+              "content": "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.66.192",
+              "raw_line": "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.66.192",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "166",
+              "date": "081109",
+              "time": "203529",
+              "pid": "155",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.111.209:50010', 'blk_-1608999687919862906', '/10.251.66.192']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.31.5:50010",
+                "blk_-1608999687919862906",
+                "/10.251.43.147"
+              ],
+              "line_number": 167,
+              "content": "10.251.31.5:50010 Served block blk_-1608999687919862906 to /10.251.43.147",
+              "raw_line": "10.251.31.5:50010 Served block blk_-1608999687919862906 to /10.251.43.147",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "167",
+              "date": "081109",
+              "time": "203529",
+              "pid": "155",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.31.5:50010', 'blk_-1608999687919862906', '/10.251.43.147']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.111.209:50010",
+                "blk_-1608999687919862906",
+                "/10.251.65.237"
+              ],
+              "line_number": 168,
+              "content": "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.65.237",
+              "raw_line": "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.65.237",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "168",
+              "date": "081109",
+              "time": "203529",
+              "pid": "156",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.111.209:50010', 'blk_-1608999687919862906', '/10.251.65.237']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.74.79:50010",
+                "blk_-1608999687919862906",
+                "/10.251.199.225"
+              ],
+              "line_number": 169,
+              "content": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.199.225",
+              "raw_line": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.199.225",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "169",
+              "date": "081109",
+              "time": "203529",
+              "pid": "156",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.74.79:50010', 'blk_-1608999687919862906', '/10.251.199.225']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.250.10.6:50010",
+                "blk_-1608999687919862906",
+                "/10.251.214.18"
+              ],
+              "line_number": 170,
+              "content": "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.214.18",
+              "raw_line": "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.214.18",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "170",
+              "date": "081109",
+              "time": "203529",
+              "pid": "157",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.250.10.6:50010', 'blk_-1608999687919862906', '/10.251.214.18']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.111.209:50010",
+                "blk_-1608999687919862906",
+                "/10.251.201.204"
+              ],
+              "line_number": 171,
+              "content": "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.201.204",
+              "raw_line": "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.201.204",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "171",
+              "date": "081109",
+              "time": "203529",
+              "pid": "157",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.111.209:50010', 'blk_-1608999687919862906', '/10.251.201.204']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.215.16:50010",
+                "blk_-1608999687919862906",
+                "/10.251.75.49"
+              ],
+              "line_number": 172,
+              "content": "10.251.215.16:50010 Served block blk_-1608999687919862906 to /10.251.75.49",
+              "raw_line": "10.251.215.16:50010 Served block blk_-1608999687919862906 to /10.251.75.49",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "172",
+              "date": "081109",
+              "time": "203529",
+              "pid": "157",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.215.16:50010', 'blk_-1608999687919862906', '/10.251.75.49']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.74.79:50010",
+                "blk_-1608999687919862906",
+                "/10.251.203.246"
+              ],
+              "line_number": 173,
+              "content": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.203.246",
+              "raw_line": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.203.246",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "173",
+              "date": "081109",
+              "time": "203529",
+              "pid": "157",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.74.79:50010', 'blk_-1608999687919862906', '/10.251.203.246']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.250.10.6:50010",
+                "blk_-1608999687919862906",
+                "/10.251.67.211"
+              ],
+              "line_number": 174,
+              "content": "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.67.211",
+              "raw_line": "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.67.211",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "174",
+              "date": "081109",
+              "time": "203529",
+              "pid": "158",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.250.10.6:50010', 'blk_-1608999687919862906', '/10.251.67.211']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.111.209:50010",
+                "blk_-1608999687919862906",
+                "/10.251.75.163"
+              ],
+              "line_number": 175,
+              "content": "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.75.163",
+              "raw_line": "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.75.163",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "175",
+              "date": "081109",
+              "time": "203529",
+              "pid": "158",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.111.209:50010', 'blk_-1608999687919862906', '/10.251.75.163']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.74.79:50010",
+                "blk_-1608999687919862906",
+                "/10.251.74.227"
+              ],
+              "line_number": 176,
+              "content": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.74.227",
+              "raw_line": "10.251.74.79:50010 Served block blk_-1608999687919862906 to /10.251.74.227",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "176",
+              "date": "081109",
+              "time": "203529",
+              "pid": "158",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.74.79:50010', 'blk_-1608999687919862906', '/10.251.74.227']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.250.10.6:50010",
+                "blk_-1608999687919862906",
+                "/10.251.194.245"
+              ],
+              "line_number": 178,
+              "content": "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.194.245",
+              "raw_line": "10.250.10.6:50010 Served block blk_-1608999687919862906 to /10.251.194.245",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "178",
+              "date": "081109",
+              "time": "203529",
+              "pid": "159",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.250.10.6:50010', 'blk_-1608999687919862906', '/10.251.194.245']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.111.209:50010",
+                "blk_-1608999687919862906",
+                "/10.251.203.166"
+              ],
+              "line_number": 179,
+              "content": "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.203.166",
+              "raw_line": "10.251.111.209:50010 Served block blk_-1608999687919862906 to /10.251.203.166",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "179",
+              "date": "081109",
+              "time": "203529",
+              "pid": "159",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.111.209:50010', 'blk_-1608999687919862906', '/10.251.203.166']"
+            },
+            {
+              "event_template_id": 10,
+              "event_template": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "extracted_variables": [
+                "10.251.215.16:50010",
+                "blk_-1608999687919862906",
+                "/10.251.73.220"
+              ],
+              "line_number": 180,
+              "content": "10.251.215.16:50010 Served block blk_-1608999687919862906 to /10.251.73.220",
+              "raw_line": "10.251.215.16:50010 Served block blk_-1608999687919862906 to /10.251.73.220",
+              "level": "INFO",
+              "label": "-",
+              "lineid": "180",
+              "date": "081109",
+              "time": "203529",
+              "pid": "159",
+              "component": "dfs.DataNode$DataXceiver",
+              "eventid": "E10",
+              "eventtemplate": "<IP_PORT> Served block <BLOCK_ID> to /<IP_ADDR>",
+              "parameterlist": "['10.251.215.16:50010', 'blk_-1608999687919862906', '/10.251.73.220']"
+            }
+          ],
+          "label": null,
+          "anomaly_score": -0.006486096770069838,
+          "line_range": [
+            1,
+            180
+          ]
+        }
+      ],
+      "analysis_cache": {},
+      "score_distribution": [
+        {
+          "score": -0.006486096770069838,
+          "label": null,
+          "is_anomalous": true
+        },
+        {
+          "score": 0.3183949482627657,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.20561740036652748,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.32028170230803604,
+          "label": null,
+          "is_anomalous": false
+        },
+        {
+          "score": 0.04756470964717918,
+          "label": null,
+          "is_anomalous": false
+        }
+      ]
+    }
+  ]
+}

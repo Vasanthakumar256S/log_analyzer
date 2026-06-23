@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Environment
+.env
+venv/
+.venv/
+
+# Models & Data (reproducible via pipeline)
+models/isolation_forest.joblib
+models/faiss_index/
+models/drain_state/
+data/raw/*.log
+data/raw/*.csv
+data/raw/*.zip
+data/raw/preprocessed/
+!data/raw/sample_hdfs.log
+!data/raw/sample_labels.csv
+data/processed/
+models
+.pytest_cache
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+results_*.json
+
+data/raw/*.tar.gz
+data/raw/*.log
+data/raw/HDFS*
