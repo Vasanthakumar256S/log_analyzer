@@ -1,4 +1,4 @@
-# LogSense: Agentic AI Framework for Root Cause Analysis of Large-Scale System Logs
+# LogSense: LLM based Analysis of Large-Scale System Logs
 
 An end-to-end, multi-stage retrieval-augmented pipeline that compresses log volume before any LLM involvement, enabling precise anomaly detection, root cause identification, and failure trace generation at scale.
 
