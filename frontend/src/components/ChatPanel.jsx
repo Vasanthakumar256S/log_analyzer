@@ -31,10 +31,10 @@ function renderMarkdown(text) {
       elements.push(<h1 key={k} className="font-bold text-base mt-3 mb-1">{inlineFormat(line.slice(2), k)}</h1>)
     } else if (/^---+$/.test(line.trim())) {
       elements.push(<hr key={k} className="border-current opacity-20 my-2" />)
-    } else if (/^[-*] /.test(line)) {
+    } else if (/^\s*[-*] /.test(line)) {
       const items = []
-      while (i < lines.length && /^[-*] /.test(lines[i])) {
-        items.push(<li key={i}>{inlineFormat(lines[i].slice(2), `li-${i}`)}</li>)
+      while (i < lines.length && /^\s*[-*] /.test(lines[i])) {
+        items.push(<li key={i}>{inlineFormat(lines[i].replace(/^\s*[-*] /, ''), `li-${i}`)}</li>)
         i++
       }
       elements.push(<ul key={`ul-${i}`} className="list-disc list-inside space-y-0.5 my-1 pl-1">{items}</ul>)

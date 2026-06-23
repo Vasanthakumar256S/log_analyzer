@@ -329,13 +329,21 @@ export default function UploadPage() {
                   <button
                     onClick={handleUpload}
                     disabled={!file || uploading}
-                    className="btn-primary flex-1 justify-center"
+                    className="btn-primary flex-1 justify-center flex items-center gap-2"
                   >
-                    {uploading && uploadProgress !== null && uploadProgress < 100
-                      ? `Uploading… ${uploadProgress}%`
-                      : uploading
-                        ? 'Starting pipeline…'
-                        : 'Upload & Analyze'}
+                    {uploading ? (
+                      <>
+                        <svg className="w-4 h-4 animate-spin shrink-0" viewBox="0 0 24 24" fill="none">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"/>
+                        </svg>
+                        {uploadProgress !== null && uploadProgress > 0 && uploadProgress < 100
+                          ? `Uploading… ${uploadProgress}%`
+                          : uploadProgress === 100
+                            ? 'Starting pipeline…'
+                            : 'Uploading…'}
+                      </>
+                    ) : 'Upload & Analyze'}
                   </button>
 
                   <button
@@ -355,17 +363,30 @@ export default function UploadPage() {
             )}
 
             {/* File upload progress bar */}
-            {uploading && uploadProgress !== null && (
+            {uploading && (
               <div className="space-y-1.5">
                 <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400">
-                  <span>{uploadProgress < 100 ? 'Uploading file to server…' : 'Upload complete, starting pipeline…'}</span>
-                  <span>{uploadProgress}%</span>
+                  <span>
+                    {uploadProgress === 100
+                      ? 'Upload complete — starting pipeline…'
+                      : 'Uploading file to server…'}
+                  </span>
+                  {uploadProgress !== null && uploadProgress > 0 && (
+                    <span>{uploadProgress}%</span>
+                  )}
                 </div>
                 <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 overflow-hidden">
-                  <div
-                    className="bg-blue-500 h-1.5 rounded-full transition-all duration-200"
-                    style={{ width: `${uploadProgress}%` }}
-                  />
+                  {uploadProgress !== null && uploadProgress > 0 ? (
+                    <div
+                      className="bg-blue-500 h-1.5 rounded-full transition-all duration-200"
+                      style={{ width: `${uploadProgress}%` }}
+                    />
+                  ) : (
+                    // Indeterminate animation when no progress events from server proxy
+                    <div className="h-1.5 w-1/3 bg-blue-500 rounded-full"
+                      style={{ animation: 'indeterminate 1.5s ease-in-out infinite' }}
+                    />
+                  )}
                 </div>
               </div>
             )}
