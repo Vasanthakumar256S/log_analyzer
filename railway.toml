@@ -1,0 +1,9 @@
+[build]
+buildCommand = "pip install -r requirements.txt -r backend/requirements.txt"
+
+[deploy]
+startCommand = "python backend/run.py --no-reload"
+healthcheckPath = "/api/health"
+healthcheckTimeout = 300
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3

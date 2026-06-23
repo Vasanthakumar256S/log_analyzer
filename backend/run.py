@@ -25,7 +25,7 @@ import uvicorn
 def main():
     ap = argparse.ArgumentParser(description="Run the LogSense backend")
     ap.add_argument("--host",     default="0.0.0.0")
-    ap.add_argument("--port",     type=int, default=8000)
+    ap.add_argument("--port",     type=int, default=int(os.environ.get("PORT", 8000)))
     ap.add_argument("--no-reload", action="store_true", help="Disable auto-reload")
     args = ap.parse_args()
 

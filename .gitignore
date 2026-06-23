@@ -6,6 +6,9 @@ dist/
 build/
 *.egg
 
+# Keep the compiled React SPA so Railway doesn't need Node to build it
+!frontend/dist/
+
 # Environment
 .env
 venv/
@@ -16,8 +19,6 @@ models/isolation_forest.joblib
 models/faiss_index/
 models/drain_state/
 data/raw/preprocessed/
-!data/raw/sample_hdfs.log
-!data/raw/sample_labels.csv
 data/processed/
 models
 .pytest_cache
@@ -35,4 +36,7 @@ Thumbs.db
 # Logs
 *.log
 results_*.json
+
+# Demo data — keep in repo for the Railway tryout button
+!data/raw/demo_hdfs.log
 
